@@ -1,4 +1,4 @@
-package br.com.faculdade.model;
+package br.com.master64k.model;
 
 import java.io.Serializable;
 

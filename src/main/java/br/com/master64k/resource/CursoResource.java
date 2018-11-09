@@ -1,4 +1,4 @@
-package br.com.faculdade.resorce;
+package br.com.master64k.resource;
 
 import java.util.List;
 
@@ -9,20 +9,20 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.faculdade.model.Curso;
-import br.com.faculdade.repositori.CursoRepositori;
+import br.com.master64k.model.Curso;
+import br.com.master64k.repository.CursoRepository;
 
 @RestController
 @RequestMapping("/cursos")
 public class CursoResource {
 
 	@Autowired
-	private CursoRepositori cursoRepositori;
+	private CursoRepository cursoRepository;
 	
 	@GetMapping
 	public ResponseEntity<?> listar() {
 		
-		List<Curso> cursos = cursoRepositori.findAll(); 
+		List<Curso> cursos = cursoRepository.findAll(); 
 		
 		return !cursos.isEmpty() 
 				? ResponseEntity.ok(cursos) 
@@ -32,7 +32,7 @@ public class CursoResource {
 	@GetMapping("/{codigo}")
 	public ResponseEntity<?> porCodigo(@PathVariable Integer codigo) {
 		
-		Curso curso = cursoRepositori.findOne(codigo); 
+		Curso curso = cursoRepository.findOne(codigo); 
 		
 		return (curso != null) 
 				? ResponseEntity.ok(curso) 
