@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: univ-dbproject-springapi
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Convidado
+Implementation-Vendor-Id: br.com.master64k
+Build-Jdk: 1.8.0_161
+Implementation-URL: http://projects.spring.io/spring-boot/univ-dbproje
+ ct-springapi/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
